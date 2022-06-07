@@ -1,0 +1,7 @@
+ <%# find user who created post %>
+        <% user = post.find_by({ "id" => post["user_id"] }) %>
+        <%# handle any potential bad data where the post is missing a user %>
+        <% if user %>
+          <%= user["first_name"] %>
+        <% else %>
+          anonymous
