@@ -6,6 +6,10 @@
             <%= form.label "title" %>
             <%= form.text_field "title" %>
           </p>
+          <div class="mb-3">
+          <%= form.label "uploaded_image"%>
+          <%= form.file_field "uploaded_image", :accept => "image/png,image/jpg,image/jpeg,image/gif"%>
+          </div>
           <p>
             <%= form.label "description" %>
             <%= form.text_field "description" %>
