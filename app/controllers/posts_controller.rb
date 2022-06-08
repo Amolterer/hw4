@@ -1,9 +1,5 @@
 class PostsController < ApplicationController
 
-  def index
-    @post = post.where({ "user_id" => @current_user["id"] })
-  end
-
   def new
     @post = Post.new
     @post.place_id = params["place_id"]
